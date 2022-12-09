@@ -1,17 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// @TODO1: Create a Greeting component (as a class) which renders a text “Hello World”.
+import React, {component } from 'react'
+class Greeting extends React.Component {
+    
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// need to 
+// @TODO2: Pass a prop called ‘name’ down to the Greeting component and render the text ‘Hello <yourname>’ (e.g. Hello John).
+<Greeting name="Sam" />
